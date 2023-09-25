@@ -1,43 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
+body {
+    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-}
-body{
-    background-color: rgb(32,32,32); 
-    font-size: 16px;
-}
-
-/* FOOTER ------------------------------------------------------------------------------*/
-
-.footer {
-    width: 100%;
-    padding: 20px 0;
-    background-color: #41545a;
     position: relative;
-    bottom: 0;
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
+    min-height: 100vh;
+    padding-bottom: 10em;
+    font-family: sans-serif;
+    background-color: rgba(0,0,0,0.8);
 }
 
-.caja-redes {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    margin: 0 auto;
-}
-
-.link-redes {
-    color: #000;
-    font-size: 30px;
-}
-
-/* SECCIÓN DE ACTIVIDADES ---------------------------------------------------------------*/
+/* PÁGINA ACTIVIDADES ---------------------------------------------------------------*/
 
 .sectionActiv{
     padding: 5vh 5vw;
