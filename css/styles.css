@@ -10,6 +10,258 @@ body {
     background-color: rgba(0,0,0,0.8);
 }
 
+/* HEADER ------------------------------------------------------------*/
+
+.caja-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;    
+    padding: 0 1vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #41545a;
+}
+.img-logo {
+    align-self: center;
+    width: 100px;
+    height: auto;
+}
+
+/* BARRA DE NAVEGACION ------------------------------------------------------------*/
+
+.barra-nav {
+    display: flex;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    gap: 2vw;
+    padding: 0;
+}
+.menu li {
+    list-style: none;
+}
+.menu a {
+    text-decoration: none;
+    color: #dddcdc;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.menu a:hover {
+    color: rgb(216, 70, 70);
+    text-shadow: 0px 0px 5px #181616;
+}
+
+/* BARRA DE BUSQUEDA ------------------------------------------------------------*/
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}    
+.input-search {
+    width: 7vw;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ddd;
+    border: none;
+    box-shadow: 2px -2px 2px #000;
+}    
+.input-search:focus {
+    background-color: #fff;
+    transition: all 0.25s;
+    width: 15vw;
+    outline: none;
+
+}    
+.button-search {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+}    
+
+/* MAIN -----------------------------------------------------------------------------*/
+
+.imagen-inicio {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.caja-article {
+    width: 100%;
+    height: auto;
+    display: flex;
+    color: #fff;
+}
+
+/* ARTÍCULO LADO DERECHO -------------------------------- */
+
+.caja-grande {
+    width: 70%;
+    height: auto;
+    background-image: url(../img/3.jpg);
+    background-size: cover;
+    text-shadow: 2px 2px 2px #000;
+}
+.titulo-caja-grande {
+    font-size: 2.5rem;
+}
+.caja-grande1 {
+    padding: 40px;
+}
+
+/* ARTÍCULOS LADO IZQUIERDO -------------------------------- */
+
+.caja-chica {
+    width: 30%;
+    display: flex;
+    flex-direction: column; 
+    height: auto;
+}
+.caja-chica > div{
+    padding: 30px;
+    flex:1;
+}
+.caja-chica1 {
+    background-color: #41545a;
+}
+.caja-chica2 {
+    background-color: #4a6067;
+}
+.caja-chica3 {
+    background-color: #1ba9cb;
+}
+
+/* SOBRE NOSOTROS -------------------------------------------------------------------*/
+
+.nosotros-parrafo {
+    width: 75%;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px 40px;
+    font-size: 1.25rem;
+    text-align: justify;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    background-image: url(../img/1.jpg);
+    background-size: cover;
+}
+
+/* FOOTER --------------------------------------------------------------------------*/
+
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #41545a;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    font-size: 1rem;
+}
+.footer-logo-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.caja-redes {
+    display: flex;
+    justify-content: space-between;
+    width: 10vw;
+}
+.link-redes {
+    color: #fff;
+}
+.texto-titulos {
+    color: #1ba9cb;
+    margin: 10px;
+}
+.texto-titulos i{
+    color: #1ba9cb;
+}
+.texto-copyright {
+    font-size: 0.8rem;
+}
+.img-footer {
+    width: 20px;
+    vertical-align: middle;
+    filter: invert(64%) sepia(53%) saturate(5194%) hue-rotate(155deg) brightness(98%) contrast(79%);
+}
+
+/* MEDIA QUERYS PAG INICIO --------------------------------------------------- */
+
+@media (max-width: 738px) {
+    .caja-header {
+        background-image: url(../img/gym1.png);
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .caja-nav {
+        display: flex;
+        flex-direction: column;
+        top: 150px;
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu a{
+        font-size: 1rem;
+    }
+
+    .caja-article {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+    }
+    
+    .caja-grande {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .caja-chica {
+        width: 100%;
+    }
+    
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+    
+    body {
+        padding-bottom: 25em;
+    };
+}
+
 /* PÁGINA ACTIVIDADES ---------------------------------------------------------------*/
 
 .sectionActiv{
