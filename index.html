@@ -13,48 +13,98 @@
 <body>
 
     <!-- HEADER -->
-    <header class="">
-        
-        <!-- NAV -->
-        <nav >
+    <header class="header">
+        <div class="caja-header">
             <a href="index.html" class="">
-                <img src="" alt="Logo Codo Power Gym">
+                <img src="img/logo4.png" alt="Logo Codo Power Gym" class="img-logo">
             </a>
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/actividades.html">Actividades</a></li>
-                <li><a href="pages/sobre nosotros.html">Sobre Nosotros</a></li> 
-                <li><a href="pages/galeria.html">Galería</a></li> 
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
+
+            <nav class="barra-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/actividades.html">Actividades</a></li>
+                    <li><a href="pages/sobre_nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="pages/galeria.html">Galería</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
             <div class="searchBox">
-                <input type="search " placeholder="Buscar...">
-                <i class="bi bi-search"></i>
+                <form action="">
+                    <input type="search " placeholder="Buscar..." class="input-search">
+                    <button class="button-search"><i class="bi bi-search"></i></button>
+                </form>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- MAIN -->
     <main>
+        <!-- HERO -->
         <div id="hero">
+            <img src="./img/gym1.png" alt="" class="imagen-inicio">
         </div>
-        <section class="">
-        </section>
+        <!-- ARTICULO -->
+        <article class="caja-article">
+            <div class="caja-chica">
+                <div class="caja-chica1">
+                    <h2>Titulo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="caja-chica2">
+                    <h2>Titulo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="caja-chica3">
+                    <h2>Titulo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="caja-grande">
+                <div class="caja-grande1">
+                    <h1 class="titulo-caja-grande">Título</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, dolorum. Voluptatum iste incidunt dignissimos inventore iure! Doloremque qui, necessitatibus sapiente sed in, velit, minus doloribus repudiandae voluptas maiores ducimus obcaecati saepe! Animi sint, quaerat recusandae ab corporis molestias rem natus dignissimos fugit? Magni debitis impedit nam unde iusto officia praesentium!</p>
+                    p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, dolorum. Voluptatum iste incidunt dignissimos inventore iure! Doloremque qui, necessitatibus sapiente sed in, velit, minus doloribus repudiandae voluptas maiores ducimus obcaecati saepe! Animi sint, quaerat recusandae ab corporis molestias rem natus dignissimos fugit? Magni debitis impedit nam unde iusto officia praesentium!</p>p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, dolorum. Voluptatum iste incidunt dignissimos inventore iure! Doloremque qui, necessitatibus sapiente sed in, velit, minus doloribus repudiandae voluptas maiores ducimus obcaecati saepe! Animi sint, quaerat recusandae ab corporis molestias rem natus dignissimos fugit? Magni debitis impedit nam unde iusto officia praesentium!</p>
+                </div>
+            </div>
+        </article>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="">
-            <a href="https://wa.me/+5491100000000" target="_blank">
-                <i class="bi bi-whatsapp"></i> +5491100000000</a>
-            <a href="https://www.instagram.com" target="_blank">
-                <i class="bi bi-instagram"></i> @CP_Gym</a>
-            <a href="https://www.google.com/maps" target="_blank">
-                <i class="bi bi-geo-alt"></i> Calle 1234, Localidad</a>
-        </div>
-        <p>&copy; 2023 Codo Power Gym. Todos los derechos reservados. Codo a Codo 4.0</p>
-    </footer>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-info">
+                <div class="footer-logo-redes">
+                    <img src="img/logo4.png" alt="Logo Codo Power Gym" class="img-logo">
+                    <div class="caja-redes">
+                        <a href="https://www.facebook.com" target="_blank" class="link-redes"><i class="bi bi-facebook"></i></a>
+                        <a href="https://wa.me/+5491100000000" target="_blank" class="link-redes"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" class="link-redes"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.google.com/maps" target="_blank" class="link-redes"><i class="bi bi-geo-alt"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="texto-titulos">LLAMANOS</h3>
+                    <img src="/img/llamada.png" alt="" class="img-footer">
+                    <span>123 456 7890</span>
+                </div>
+                <div>
+                    <h3 class="texto-titulos">UBICACION</h3>
+                    <img src="/img/position.png" alt="" class="img-footer">
+                    <span>Calle 1234 | Localidad</span>
+                </div>
+                <div>
+                    <h3 class="texto-titulos">HORARIOS</h3>
+                    <img src="/img/reloj.png" alt="" class="img-footer">
+                    <span>Lunes a Viernes 08:00 a 23:00</span>
+                    <br>
+                    <span>Sabados 08:00 a 13:00</span>
+                </div>
+            </div>
+            <div>
+                <span class="texto-copyright">&copy; 2023 Codo Power Gym. Todos los derechos reservados. Codo a Codo 4.0</span>
+            </div>
+        </footer>
 
-    <script src="./js/script.js"></script>
+        <script src="./js/script.js"></script>
 </body>
 
 </html>
