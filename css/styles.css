@@ -5,77 +5,36 @@ body {
     box-sizing: border-box;
     position: relative;
     min-height: 100vh;
-    padding-bottom: 9em;
-    background-color: #172f36;
+    padding-bottom: 10em;
 }
 
 /* HEADER */
 
 .caja-header {
-    position: absolute;
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    padding: 10px 0px;
+    background-color: #41545a;
+    margin-bottom: 5px;
 }
 
 .img-logo {
-    width: 120px;
+    width: 100px;
     margin-left: 20px;
-}
-
-/* BARRA DE BUSQUEDA */
-.searchBox {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.input-search {
-    font-size: 20px;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #ddd;
-    border: none;
-    box-shadow: 2px -2px 2px #000;
-    margin-right: 10px;
-}
-
-.input-search:focus {
-    background-color: #fff;
-
-}
-
-.button-search {
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #fff;
 }
 
 /* BARRA DE NAVEGACION */
 
-.caja-nav {
-    position: absolute;
-    top: 130px;
-    left: 5%;
-}
-
 .barra-nav {
     display: flex;
-    justify-content: space-between;
-    text-align: center;
     align-items: center;
-    padding: 0 20px;
+    
 }
 
 .menu {
-    margin: 20px auto;
     display: flex;
     gap: 20px;
     padding: 0;
-    ;
 }
 
 .menu li {
@@ -84,16 +43,44 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: #fff;
-    font-size: 30px;
+    color: #dddcdc;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .menu a:hover {
     color: rgb(216, 70, 70);
     text-shadow: 0px 0px 5px #181616;
-
 }
+
+/* BARRA DE BUSQUEDA */
+.searchBox {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}    
+
+.input-search {
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ddd;
+    border: none;
+    box-shadow: 2px -2px 2px #000;
+}    
+
+.input-search:focus {
+    background-color: #fff;
+
+}    
+
+.button-search {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}    
 
 
 /* MAIN */
@@ -151,9 +138,9 @@ body {
 
 .nosotros-parrafo {
     width: 75%;
-    margin: 220px auto;
     border: 2px solid #000;
     border-radius: 20px;
+    margin: 20px auto;
     padding: 20px 40px;
     font-size: 20px;
     text-align: justify;
@@ -161,6 +148,58 @@ body {
     text-shadow: 2px 2px 2px #000;
     background-image: url(../img/1.jpg);
     background-size: cover;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #41545a;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+.footer-logo-redes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.caja-redes {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.link-redes {
+    color: #fff;
+    font-size: 25px;
+}
+
+.texto-titulos {
+    color: #1b9ca8;
+    margin: 10px;
+}
+
+.texto-copyright {
+    font-size: 15px;
+}
+
+.img-footer {
+    width: 20px;
+    vertical-align: middle;
 }
 
 
@@ -185,7 +224,7 @@ body {
     .menu {
         display: flex;
         flex-direction: column;
-        text-align: left;
+        text-align: center;
     }
 
     .menu a{
@@ -211,29 +250,20 @@ body {
     }
 
     
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+    
+    body {
+        padding-bottom: 25em;
+    };
 }
 
-/* FOOTER */
-
-.footer {
-    width: 100%;
-    padding: 20px 0;
-    background-color: #41545a;
-    position: absolute;
-    bottom: 0;
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-}
-
-.caja-redes {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    margin: 0 auto;
-}
-
-.link-redes {
-    color: #000;
-    font-size: 30px;
-}
