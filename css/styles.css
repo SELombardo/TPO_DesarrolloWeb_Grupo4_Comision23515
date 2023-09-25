@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
     padding-bottom: 10em;
     font-family: sans-serif;
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* HEADER ------------------------------------------------------------*/
@@ -259,4 +260,110 @@ body {
     body {
         padding-bottom: 25em;
     };
+}
+
+/* PÁGINA ACTIVIDADES ---------------------------------------------------------------*/
+
+.sectionActiv{
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+}
+.sectionActiv h1, p {
+    margin-bottom: 3vh;
+    text-align: center;
+    color: #f3f3f3;
+}
+.sectionActiv h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.sectionActiv > p {
+    font-size: 1rem;
+}
+
+/* TARJETAS DE ACTIVIDADES --------------------------------------------------------------*/
+
+.containerActiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    row-gap: 3vh;
+    column-gap: 1.2vw;
+    justify-items: center;
+}
+.cardActiv {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    color: rgb(47,60,64);
+    perspective: 600px;                 /* animación de rotación */
+}
+.cardActiv .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px black;
+    overflow: hidden;
+    backface-visibility: hidden;        /* animación de rotación */
+    transition: .5s;                    /* animación de rotación */
+}
+
+/* FRENTE DE LA TARJETA */
+.cardActiv .front{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(0deg);           /* animación de rotación */
+}
+.cardActiv .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardActiv .front h3{
+    position: absolute;
+    width: 100%;
+    color: #f3f3f3;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.8), 
+                40px 30px 0 rgba(29,170,204,0.7), 
+                -40px -30px 0 rgba(80, 104, 112, 0.7);
+    font-size: 2.5rem;
+}
+
+/* DORSO DE LA TARJETA */
+.cardActiv .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(65,84,90,.5);
+    color: rgb(29,170,204);
+    text-align: center;
+    font-size: 1.2rem;
+    transform: rotateY(180deg);         /* animación de rotación */
+}
+.cardActiv .back h3{
+    margin: 0 auto 5%;
+    width: 80%;
+    text-transform: uppercase;   
+    border-bottom: 1px solid rgba(255, 255, 255, .5);    
+}
+.cardActiv:hover .front{                /* animación de rotación */
+    transform: rotateY(180deg);
+}
+.cardActiv:hover .back{                 /* animación de rotación */
+    transform: rotateY(360deg);
+    
+}
+
+/* ANIMACIÓN DE OPACIDAD TARJETAS INACTIVAS*/
+.containerActiv:has(:hover) > .cardActiv:not(:hover){
+    opacity: .4;
+}
+.cardActiv {
+    transition: .5s;     
 }
