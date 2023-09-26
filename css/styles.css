@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     padding-bottom: 10em;
     font-family: sans-serif;
-    background-color: rgba(0,0,0,0.8);
+    background-color: #0B4047;
 }
 
 /* HEADER ------------------------------------------------------------*/
@@ -21,7 +21,7 @@ body {
     padding: 0 1vw;
     display: flex;
     justify-content: space-between;
-    background-color: #41545a;
+    background-color: #04343B;
 }
 .img-logo {
     align-self: center;
@@ -104,15 +104,17 @@ body {
 .caja-grande {
     width: 70%;
     height: auto;
-    background-image: url(../img/3.jpg);
-    background-size: cover;
+    background: #046780 url(../img/3.jpg) center center/cover;
+    background-blend-mode: multiply;
     text-shadow: 2px 2px 2px #000;
+    text-align: left;
 }
 .titulo-caja-grande {
     font-size: 2.5rem;
 }
 .caja-grande1 {
     padding: 40px;
+    text-align: left;
 }
 
 /* ARTÍCULOS LADO IZQUIERDO -------------------------------- */
@@ -128,13 +130,13 @@ body {
     flex:1;
 }
 .caja-chica1 {
-    background-color: #41545a;
+    background-color: #075661;
 }
 .caja-chica2 {
-    background-color: #4a6067;
+    background-color: #096D7A;
 }
 .caja-chica3 {
-    background-color: #1ba9cb;
+    background-color: #1A9CAD;
 }
 
 /* SOBRE NOSOTROS -------------------------------------------------------------------*/
@@ -158,7 +160,7 @@ body {
 .footer {
     width: 100%;
     padding: 20px 0;
-    background-color: #41545a;
+    background-color: #04343B;
     position: absolute;
     bottom: 0;
     color: #fff;
@@ -171,6 +173,7 @@ body {
     justify-content: space-between;
     margin: 0 30px;
     font-size: 1rem;
+    gap: 2vw;
 }
 .footer-logo-redes {
     display: flex;
@@ -181,7 +184,7 @@ body {
 .caja-redes {
     display: flex;
     justify-content: space-between;
-    width: 10vw;
+    gap: 20px;
 }
 .link-redes {
     color: #fff;
@@ -210,7 +213,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-.sectionActiv h1, p {
+.sectionActiv h1, .sectionActiv p {
     margin-bottom: 3vh;
     text-align: center;
     color: #f3f3f3;
@@ -367,7 +370,10 @@ body {
     .footer {
         padding: 20px 0;
     }
-    
+
+    .caja-redes {
+        gap: 50px;
+    }
     body {
         padding-bottom: 25em;
     };
