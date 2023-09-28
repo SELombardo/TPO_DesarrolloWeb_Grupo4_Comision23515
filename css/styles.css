@@ -85,6 +85,21 @@ body {
 
 /* MAIN */
 
+.caja-mensaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+    text-align: center;
+    font-size: 200%;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.mensajes {
+    position: absolute;
+    width: 80%;
+}
+
 .imagen-inicio {
     width: 100%;
 }
@@ -260,6 +275,10 @@ body {
 
     .footer {
         padding: 20px 0;
+    }
+
+    .caja-mensaje {
+        font-size: 10px;
     }
     
     body {
