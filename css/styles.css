@@ -11,9 +11,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #0B4047;
 }
-main {
-    margin-top: 68px;   /* corrección superposición con nav */
-}
 
 /* ESTILO GENERAL SECCIONES -------------------------------------------------*/
 
@@ -25,34 +22,31 @@ main {
     display: flex;
     flex-direction: column;
 }
-
 .tituloSection,
 .introSection {
     margin-bottom: 3vh;
     text-align: center;
     color: #f3f3f3;
 }
-
 .tituloSection {
     font-size: 2.5rem;
     text-transform: uppercase;
 }
-
 .introSection {
     font-size: 1rem;
-  
+}
+
 /* HEADER INICIO ------------------------------------------------------------*/
 
 .caja-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #41545a;
+    background-color: #04343B;
 }
 .caja-header-nav {
     display: flex;
     width: 100%;
-    background-color: #04343B;
 }
 .img-logo {
     align-self: center;
@@ -68,7 +62,6 @@ main {
     justify-content: center;
     margin: 0 auto;
 }
-
 .menu {
     display: flex;
     gap: 2vw;
@@ -131,12 +124,10 @@ main {
     font-size: 130%;
     text-shadow: 2px 2px 2px #000;
 }
-
 .mensajes {
     position: absolute;
     width: 80%;
 }
-
 .imagen-inicio {
     width: 100%;
     aspect-ratio: 16/9;
@@ -426,9 +417,6 @@ main {
         padding-bottom: 25em;
     }
 
-    main {
-        margin-top: 0;  /* corrección superposición con nav */
-    };
     main {
         margin: 0;
     }
