@@ -26,3 +26,10 @@ function mostrarMensaje() {
 
 // Inicia el proceso mostrando el primer mensaje
 mostrarMensaje();
+
+const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav-links");
+
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});

@@ -7,21 +7,56 @@ body {
     min-height: 100vh;
     padding-bottom: 10em;
     font-family: sans-serif;
+    background-color: #0B4047;
+}
+
+main {
+    margin-top: 5px;
+}
+
+/* ESTILO GENERAL SECCIONES -------------------------------------------------*/
+
+.sectionActiv,
+.sectionNosotros,
+.sectionContacto,
+.sectionGalería {
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloSection,
+.introSection {
+    margin-bottom: 3vh;
+    text-align: center;
+    color: #f3f3f3;
+}
+
+.tituloSection {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.introSection {
+    font-size: 1rem;
 }
 
 /* HEADER ------------------------------------------------------------*/
 
 .caja-header {
-    position: fixed;
-    left: 0;
-    top: 0;
     width: 100%;
-    z-index: 10;    
-    padding: 0 1vw;
     display: flex;
     justify-content: space-between;
     background-color: #41545a;
+    padding: 10px 0;
 }
+
+.caja-header-nav {
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+}
+
 .img-logo {
     align-self: center;
     width: 100px;
@@ -33,7 +68,10 @@ body {
 .barra-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
+
 .menu {
     display: flex;
     gap: 2vw;
@@ -56,12 +94,14 @@ body {
 /* BARRA DE BUSQUEDA ------------------------------------------------------------*/
 
 .searchBox {
-    display: flex;
+    position: absolute;
+    right: 0;
+    top: 30px;
     align-items: center;
     margin-right: 20px;
 }    
 .input-search {
-    width: 7vw;
+    width: 100px;
     font-size: 1rem;
     border-radius: 5px;
     padding: 5px;
@@ -72,9 +112,8 @@ body {
 .input-search:focus {
     background-color: #fff;
     transition: all 0.25s;
-    width: 15vw;
+    width: 200px;
     outline: none;
-
 }    
 .button-search {
     background-color: transparent;
@@ -117,15 +156,20 @@ body {
 .caja-grande {
     width: 70%;
     height: auto;
-    background-image: url(../img/3.jpg);
-    background-size: cover;
+    background: #046780 url(../img/3.jpg) center center/cover;
     text-shadow: 2px 2px 2px #000;
+    text-align: left;
 }
 .titulo-caja-grande {
     font-size: 2.5rem;
 }
 .caja-grande1 {
     padding: 40px;
+    text-align: left;
+}
+
+.caja-grande1 p {
+    font-size: 20px;
 }
 
 /* ARTÍCULOS LADO IZQUIERDO -------------------------------- */
@@ -184,6 +228,7 @@ body {
     justify-content: space-between;
     margin: 0 30px;
     font-size: 1rem;
+    gap: 2vw;
 }
 .footer-logo-redes {
     display: flex;
@@ -194,7 +239,7 @@ body {
 .caja-redes {
     display: flex;
     justify-content: space-between;
-    width: 10vw;
+    gap: 20px;
 }
 .link-redes {
     color: #fff;
@@ -215,17 +260,124 @@ body {
     filter: invert(64%) sepia(53%) saturate(5194%) hue-rotate(155deg) brightness(98%) contrast(79%);
 }
 
+/* TARJETAS DE ACTIVIDADES --------------------------------------------------------------*/
+
+.containerActiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    row-gap: 3vh;
+    column-gap: 1.2vw;
+    justify-items: center;
+}
+
+.cardActiv {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    color: rgb(47, 60, 64);
+    perspective: 600px;
+    /* animación de rotación */
+}
+
+.cardActiv .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px black;
+    overflow: hidden;
+    backface-visibility: hidden;
+    /* animación de rotación */
+    transition: .5s;
+    /* animación de rotación */
+}
+
+/* FRENTE DE LA TARJETA */
+.cardActiv .front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(0deg);
+    /* animación de rotación */
+}
+
+.cardActiv .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardActiv .front h3 {
+    position: absolute;
+    width: 100%;
+    color: #f3f3f3;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+        40px 30px 0 rgba(29, 170, 204, 0.7),
+        -40px -30px 0 rgba(80, 104, 112, 0.7);
+    font-size: 2.5rem;
+}
+
+/* DORSO DE LA TARJETA */
+.cardActiv .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(65, 84, 90, .5);
+    color: rgb(29, 170, 204);
+    text-align: center;
+    font-size: 1.2rem;
+    transform: rotateY(180deg);
+    /* animación de rotación */
+}
+
+.cardActiv .back h3 {
+    margin: 0 auto 5%;
+    width: 80%;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.cardActiv:hover .front {
+    /* animación de rotación */
+    transform: rotateY(180deg);
+}
+
+.cardActiv:hover .back {
+    /* animación de rotación */
+    transform: rotateY(360deg);
+
+}
+
+/* ANIMACIÓN DE OPACIDAD TARJETAS INACTIVAS*/
+.containerActiv:has(:hover)>.cardActiv:not(:hover) {
+    opacity: .4;
+}
+
+.cardActiv {
+    transition: .5s;
+}
+
 /* MEDIA QUERYS PAG INICIO --------------------------------------------------- */
 
-@media (max-width: 738px) {
+@media (max-width: 890px) {
     .caja-header {
         background-image: url(../img/gym1.png);
-        position: static;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         width: 100%;
+        padding: 10px;
+    }
+
+    .barra-nav {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        padding-right: 30px;
     }
 
     .caja-nav {
@@ -242,6 +394,10 @@ body {
 
     .menu a{
         font-size: 1rem;
+    }
+
+    .searchBox {
+        position: static;
     }
 
     .caja-article {
@@ -271,11 +427,62 @@ body {
         padding: 20px 0;
     }
 
+    .caja-redes {
+        gap: 50px;
+    }
+
     .caja-mensaje {
         font-size: 10px;
+        
     }
     
     body {
         padding-bottom: 25em;
     };
+
+    main {
+        margin: 0;
+    }
+
+    .caja-header {
+        flex-direction: column;
+    }
+
+    .caja-header-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        z-index: 10;
+        top: 60px;
+        left: 0;
+        background-image: url(../img/gym1.png);
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
 }
