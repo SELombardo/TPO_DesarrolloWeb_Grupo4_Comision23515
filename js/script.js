@@ -25,3 +25,4 @@ fetch("../database.json") //Solicita el archivo .json mediante la función fetch
             `;
     }
   });
+
