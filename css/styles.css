@@ -17,15 +17,20 @@ main {
 
 /* ESTILO GENERAL SECCIONES -------------------------------------------------*/
 
-.sectionActiv, .sectionNosotros, .sectionContacto, .sectionGalería{
+.sectionActiv, 
+.sectionNosotros,
+.sectionEquipo,
+.sectionNum,
+.sectionContacto, 
+.sectionGalería{
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto 100px;
     display: flex;
     flex-direction: column;
     color: #f3f3f3;
 }
-.tituloSection, .introSection {
-    margin-bottom: 3vh;
+.tituloSection, 
+.introSection {
     text-align: center;
 } 
 .tituloSection {
@@ -34,7 +39,7 @@ main {
 }
 .introSection {
     font-size: 1rem;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 /* HEADER INICIO ------------------------------------------------------------*/
 
@@ -166,64 +171,71 @@ main {
 
 /* PÁGINA SOBRE NOSOTROS -------------------------------------------------------------------*/
 
-.articulo1, .articulo2, .articulo3{
+/* .articulo1, 
+.articulo2, 
+.articulo3 {
     margin-bottom: 100px;
-}
+} */
 
 /* ARTÍCULO 1 */
-.articulo1{
+.articulo1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.imgArt1{
+.imgArt1 {
     width: 50%;
     aspect-ratio: 3/2;
 }
-.textoArt1{
+.textoArt1 {
     width: 50%;
     padding: 0 4vw;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ARTÍCULO 2 */
-.articulo2{
+.sectionCoach {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.containerCoaches{
+.containerCoaches {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3vw;
     justify-items: center;
 }
-.cardCoach{
+.cardCoach {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    text-align: center;
 }
-.cardCoach img{
+.cardCoach img {
     width: 80%;
     border-radius: 50%;
 }
-.cardCoach p{
+.cardCoach p {
     padding: 0 2vw;
 }
 
 /* ARTÍCULO 3 */
-.articulo3{
+.sectionNum {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
-.numBox{
+.numBox {
     padding: 0 2vw;
     border-left: 1px solid #f3f3f3;
     text-align: center; 
 }
-.num{
+.num {
     font-size: 4rem;
     color: rgb(29,170,204);
+}
+.numBox p{
+    font-size: 0.8rem;
 }
 /* FOOTER --------------------------------------------------------------------------*/
 
