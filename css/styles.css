@@ -6,84 +6,85 @@ body {
     position: relative;
     min-height: 100vh;
     padding-bottom: 10em;
+    font-family: sans-serif;
 }
 
-/* HEADER */
+/* HEADER ------------------------------------------------------------*/
 
 .caja-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;    
+    padding: 0 1vw;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     background-color: #41545a;
-    margin-bottom: 5px;
 }
-
 .img-logo {
+    align-self: center;
     width: 100px;
-    margin-left: 20px;
+    height: auto;
 }
 
-/* BARRA DE NAVEGACION */
+/* BARRA DE NAVEGACION ------------------------------------------------------------*/
 
 .barra-nav {
     display: flex;
     align-items: center;
-    
 }
-
 .menu {
     display: flex;
-    gap: 20px;
+    gap: 2vw;
     padding: 0;
 }
-
 .menu li {
     list-style: none;
 }
-
 .menu a {
     text-decoration: none;
     color: #dddcdc;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: bold;
 }
-
 .menu a:hover {
     color: rgb(216, 70, 70);
     text-shadow: 0px 0px 5px #181616;
 }
 
-/* BARRA DE BUSQUEDA */
+/* BARRA DE BUSQUEDA ------------------------------------------------------------*/
+
 .searchBox {
     display: flex;
     align-items: center;
     margin-right: 20px;
 }    
-
 .input-search {
-    font-size: 20px;
+    width: 7vw;
+    font-size: 1rem;
     border-radius: 5px;
     padding: 5px;
     background-color: #ddd;
     border: none;
     box-shadow: 2px -2px 2px #000;
 }    
-
 .input-search:focus {
     background-color: #fff;
+    transition: all 0.25s;
+    width: 15vw;
+    outline: none;
 
 }    
-
 .button-search {
     background-color: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 1rem;
     cursor: pointer;
     color: #fff;
 }    
 
-
-/* MAIN */
+/* MAIN -----------------------------------------------------------------------------*/
 
 .caja-mensaje {
     display: flex;
@@ -102,54 +103,54 @@ body {
 
 .imagen-inicio {
     width: 100%;
+    aspect-ratio: 16/9;
 }
-
 .caja-article {
     width: 100%;
+    height: auto;
     display: flex;
     color: #fff;
 }
 
+/* ARTÍCULO LADO DERECHO -------------------------------- */
 
 .caja-grande {
     width: 70%;
+    height: auto;
     background-image: url(../img/3.jpg);
     background-size: cover;
     text-shadow: 2px 2px 2px #000;
 }
-
+.titulo-caja-grande {
+    font-size: 2.5rem;
+}
 .caja-grande1 {
     padding: 40px;
 }
 
-.titulo-caja-grande {
-    font-size: 40px;
-}
+/* ARTÍCULOS LADO IZQUIERDO -------------------------------- */
 
 .caja-chica {
     width: 30%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column; 
+    height: auto;
 }
-
+.caja-chica > div{
+    padding: 30px;
+    flex:1;
+}
 .caja-chica1 {
     background-color: #41545a;
-    padding: 30px;
-
 }
-
 .caja-chica2 {
     background-color: #4a6067;
-    padding: 30px;
 }
-
 .caja-chica3 {
     background-color: #1ba9cb;
-    padding: 30px;
 }
 
-/* SOBRE NOSOTROS */
+/* SOBRE NOSOTROS -------------------------------------------------------------------*/
 
 .nosotros-parrafo {
     width: 75%;
@@ -157,7 +158,7 @@ body {
     border-radius: 20px;
     margin: 20px auto;
     padding: 20px 40px;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: justify;
     color: #fff;
     text-shadow: 2px 2px 2px #000;
@@ -165,7 +166,7 @@ body {
     background-size: cover;
 }
 
-/* FOOTER */
+/* FOOTER --------------------------------------------------------------------------*/
 
 .footer {
     width: 100%;
@@ -174,51 +175,49 @@ body {
     position: absolute;
     bottom: 0;
     color: #fff;
-    font-size: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
-
 .footer-info {
     display: flex;
     justify-content: space-between;
     margin: 0 30px;
+    font-size: 1rem;
 }
-
 .footer-logo-redes {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-
 .caja-redes {
     display: flex;
     justify-content: space-between;
-    width: 150px;
+    width: 10vw;
 }
-
 .link-redes {
     color: #fff;
-    font-size: 25px;
 }
-
 .texto-titulos {
-    color: #1b9ca8;
+    color: #1ba9cb;
     margin: 10px;
 }
-
-.texto-copyright {
-    font-size: 15px;
+.texto-titulos i{
+    color: #1ba9cb;
 }
-
+.texto-copyright {
+    font-size: 0.8rem;
+}
 .img-footer {
     width: 20px;
     vertical-align: middle;
+    filter: invert(64%) sepia(53%) saturate(5194%) hue-rotate(155deg) brightness(98%) contrast(79%);
 }
 
+/* MEDIA QUERYS PAG INICIO --------------------------------------------------- */
 
-@media (max-width: 980px) {
+@media (max-width: 738px) {
     .caja-header {
         background-image: url(../img/gym1.png);
         position: static;
@@ -227,7 +226,6 @@ body {
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding: 10px 0px;
     }
 
     .caja-nav {
@@ -243,7 +241,7 @@ body {
     }
 
     .menu a{
-        font-size: 15px;
+        font-size: 1rem;
     }
 
     .caja-article {
@@ -253,17 +251,13 @@ body {
     }
     
     .caja-grande {
-        
         width: 100%;
         margin-top: 5px;
-        margin-bottom: 50px;
     }
 
     .caja-chica {
         width: 100%;
-        gap: 5px;
     }
-
     
     .footer-info {
         display: flex;
@@ -285,4 +279,3 @@ body {
         padding-bottom: 25em;
     };
 }
-
