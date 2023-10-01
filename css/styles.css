@@ -14,26 +14,29 @@ body {
 
 /* ESTILO GENERAL SECCIONES -------------------------------------------------*/
 
-.sectionActiv,
+.sectionActiv, 
 .sectionNosotros,
-.sectionContacto,
-.sectionGalería {
-    padding: 5vh 5vw;
+.sectionEquipo,
+.sectionNum,
+.sectionContacto, 
+.sectionGalería{
+    width: 95%;
+    margin: 0 auto 100px;
     display: flex;
     flex-direction: column;
-}
-.tituloSection,
-.introSection {
-    margin-bottom: 3vh;
-    text-align: center;
     color: #f3f3f3;
 }
+.tituloSection, 
+.introSection {
+    text-align: center;
+} 
 .tituloSection {
     font-size: 2.5rem;
     text-transform: uppercase;
 }
 .introSection {
     font-size: 1rem;
+    margin-bottom: 80px;
 }
 
 /* HEADER INICIO ------------------------------------------------------------*/
@@ -184,7 +187,66 @@ body {
 
 /* PÁGINA SOBRE NOSOTROS -------------------------------------------------------------------*/
 
+/* ARTÍCULO SOBRE NOSOTROS*/
+.articulo1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.imgArt1 {
+    width: 50%;
+    aspect-ratio: 3/2;
+}
+.textoArt1 {
+    width: 50%;
+    padding: 0 4vw;
+    display: flex;
+    flex-direction: column;
+}
 
+/* SECCIÓN COACHES */
+.sectionCoach {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.containerCoaches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vw;
+    justify-items: center;
+}
+.cardCoach {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.cardCoach img {
+    width: 80%;
+    border-radius: 50%;
+}
+.cardCoach p {
+    padding: 0 2vw;
+}
+
+/* SECCIÓN NUMEROS */
+.sectionNum {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.numBox {
+    padding: 0 2vw;
+    border-left: 1px solid #f3f3f3;
+    text-align: center; 
+}
+.num {
+    font-size: 4rem;
+    color: rgb(29,170,204);
+}
+.numBox p{
+    font-size: 0.8rem;
+}
 
 /* FOOTER --------------------------------------------------------------------------*/
 
