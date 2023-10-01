@@ -7,26 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>TPO Desarrollo Web</title>
+    <title>Sobre Nosotros</title>
 </head>
 
 <body>
     <!-- HEADER -->
     <header class="header">
         <div class="caja-header">
-            <a href="../index.html" class="">
-                <img src="../img/logo4.png" alt="Logo Codo Power Gym" class="img-logo">
-            </a>
+            <div class="caja-header-nav">
 
-            <nav class="barra-nav">
-                <ul class="menu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./actividades.html">Actividades</a></li>
-                    <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="./galeria.html">Galería</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+                <div class="caja-logo">
+                    <a href="../index.html">
+                        <img src="../img/logo4.png" alt="Logo Codo Power Gym" class="img-logo">
+                    </a>
+                </div>
+
+                <nav class="barra-nav">
+                    <ul class="menu nav-links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="actividades.html">Actividades</a></li>
+                        <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </nav>
+            </div>
 
             <div class="searchBox">
                 <form action="">
@@ -37,6 +47,7 @@
         </div>
     </header>
 
+    <!-- MAIN -->
     <main>
         <section class="sectionNosotros">
             <h1 class="tituloSection">Sobre Nosotros</h1>
@@ -112,36 +123,42 @@
             <div class="footer-logo-redes">
                 <img src="../img/logo4.png" alt="Logo Codo Power Gym" class="img-logo">
                 <div class="caja-redes">
-                    <a href="https://www.facebook.com" target="_blank" class="link-redes"><i class="bi bi-facebook"></i></a>
-                    <a href="https://wa.me/+5491100000000" target="_blank" class="link-redes"><i class="bi bi-whatsapp"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" class="link-redes"><i class="bi bi-instagram"></i></a>
-                    <a href="https://www.google.com/maps" target="_blank" class="link-redes"><i class="bi bi-geo-alt"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="link-redes">
+                        <i class="bi bi-facebook"></i></a>
+                    <a href="https://wa.me/+5491100000000" target="_blank" class="link-redes">
+                        <i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="link-redes">
+                        <i class="bi bi-instagram"></i></a>
+                    <a href="https://www.google.com/maps" target="_blank" class="link-redes">
+                        <i class="bi bi-geo-alt"></i></a>
                 </div>
             </div>
             <div>
                 <h3 class="texto-titulos">LLAMANOS</h3>
-                <img src="../img/llamada.png" alt="" class="img-footer">
+                <img src="/img/llamada.png" alt="" class="img-footer">
                 <span>123 456 7890</span>
             </div>
             <div>
                 <h3 class="texto-titulos">UBICACION</h3>
-                <img src="../img/position.png" alt="" class="img-footer">
-                <span>Calle 1234 | Localidad</span>
+                <img src="/img/position.png" alt="" class="img-footer">
+                <span>Calle 1234, Localidad</span>
             </div>
             <div>
                 <h3 class="texto-titulos">HORARIOS</h3>
-                <img src="../img/reloj.png" alt="" class="img-footer">
+                <img src="/img/reloj.png" alt="" class="img-footer">
                 <span>Lunes a Viernes 08:00 a 23:00</span>
                 <br>
                 <span>Sabados 08:00 a 13:00</span>
             </div>
         </div>
         <div>
-            <span class="texto-copyright">&copy; 2023 Codo Power Gym. Todos los derechos reservados. Codo a Codo 4.0</span>
+            <span class="texto-copyright">&copy; 2023 Codo Power Gym. Todos los derechos reservados. Codo a Codo
+                4.0</span>
         </div>
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>
