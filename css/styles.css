@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@font-face {
-    font-family: 'fuenteHero';
-    src: url('../fonts/Watone.ttf') format('truetype');
-}
-
 body {
     width: 100%;
     margin: 0;
@@ -19,29 +14,26 @@ body {
 
 /* ESTILO GENERAL SECCIONES -------------------------------------------------*/
 
-.sectionActiv, 
+.sectionActiv,
 .sectionNosotros,
-.sectionEquipo,
-.sectionNum,
-.sectionContacto, 
-.sectionGalería{
-    width: 95%;
-    margin: 0 auto 100px;
+.sectionContacto,
+.sectionGalería {
+    padding: 5vh 5vw;
     display: flex;
     flex-direction: column;
+}
+.tituloSection,
+.introSection {
+    margin-bottom: 3vh;
+    text-align: center;
     color: #f3f3f3;
 }
-.tituloSection, 
-.introSection {
-    text-align: center;
-} 
 .tituloSection {
     font-size: 2.5rem;
     text-transform: uppercase;
 }
 .introSection {
     font-size: 1rem;
-    margin-bottom: 80px;
 }
 
 /* HEADER INICIO ------------------------------------------------------------*/
@@ -129,8 +121,7 @@ body {
     align-items: center;
     color: #ddd;
     text-align: center;
-    font-family: 'fuenteHero', sans-serif;
-    font-size: 2rem;
+    font-size: 130%;
     text-shadow: 2px 2px 2px #000;
 }
 .mensajes {
@@ -166,7 +157,7 @@ body {
     text-align: left;
 }
 .caja-grande1 p {
-    font-size: 1.25rem;
+    font-size: 20px;
 }
 
 /* ARTÍCULOS LATERAL IZQUIERDO -------------------------------- */
@@ -193,67 +184,20 @@ body {
 
 /* PÁGINA SOBRE NOSOTROS -------------------------------------------------------------------*/
 
-/* ARTÍCULO SOBRE NOSOTROS*/
-.articulo1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 3vw;
+/* GALERIA----------------------------------------------------------------------------------*/
+
+.Gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    width: 100%;
+    margin: 0% 10% 10% 10%;
+    gap: 1em;
 }
-.imgArt1 {
-    width: 50%;
+
+.cardGallery img{
+    width: 100%;
     height: auto;
-}
-.textoArt1 {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-}
-
-/* SECCIÓN COACHES */
-.sectionCoach {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.containerCoaches {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3vw;
-    justify-items: center;
-}
-.cardCoach {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.cardCoach img {
-    width: 80%;
-    border-radius: 50%;
-}
-.cardCoach p {
-    padding: 0 2vw;
-}
-
-/* SECCIÓN NUMEROS */
-.sectionNum {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-.numBox {
-    padding: 0 2vw;
-    border-left: 1px solid #f3f3f3;
-    text-align: center; 
-}
-.num {
-    font-size: 4rem;
-    color: rgb(29,170,204);
-}
-.numBox p{
-    font-size: 0.8rem;
+    border-radius: 10px;
 }
 
 /* FOOTER --------------------------------------------------------------------------*/
@@ -479,7 +423,7 @@ body {
     }
 
     .caja-mensaje {
-        font-size: 0.7rem;
+        font-size: 10px;
         
     }
 
