@@ -16,9 +16,12 @@ body {
 
 .sectionActiv,
 .sectionNosotros,
-.sectionContacto,
-.sectionGalería {
-    padding: 5vh 5vw;
+.sectionEquipo,
+.sectionNum,
+.sectionContacto, 
+.sectionGalería{
+    width: 95%;
+    margin: 0 auto 100px;
     display: flex;
     flex-direction: column;
 }
@@ -144,7 +147,7 @@ body {
 .caja-grande {
     width: 70%;
     height: auto;
-    background: #046780 url(../img/3.jpg) center center/cover;
+    background: #034e61 url(../img/3.jpg) center center/cover;
     background-blend-mode: multiply;
     text-shadow: 2px 2px 2px #000;
     text-align: left;
@@ -153,11 +156,11 @@ body {
     font-size: 2.5rem;
 }
 .caja-grande1 {
-    padding: 40px;
+    padding: 8vw;
     text-align: left;
 }
 .caja-grande1 p {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 /* ARTÍCULOS LATERAL IZQUIERDO -------------------------------- */
@@ -184,20 +187,67 @@ body {
 
 /* PÁGINA SOBRE NOSOTROS -------------------------------------------------------------------*/
 
-/* GALERIA----------------------------------------------------------------------------------*/
-
-.Gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 25%);
-    width: 100%;
-    margin: 0% 10% 10% 10%;
-    gap: 1em;
+/* ARTÍCULO SOBRE NOSOTROS*/
+.articulo1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+.imgArt1 {
+    width: 50%;
+    height: auto;
+}
+.textoArt1 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
 }
 
-.cardGallery img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+/* SECCIÓN COACHES */
+.sectionCoach {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.containerCoaches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vw;
+    justify-items: center;
+}
+.cardCoach {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.cardCoach img {
+    width: 80%;
+    border-radius: 50%;
+}
+.cardCoach p {
+    padding: 0 2vw;
+}
+
+/* SECCIÓN NUMEROS */
+.sectionNum {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.numBox {
+    padding: 0 2vw;
+    border-left: 1px solid #f3f3f3;
+    text-align: center; 
+}
+.num {
+    font-size: 4rem;
+    color: rgb(29,170,204);
+}
+.numBox p{
+    font-size: 0.8rem;
 }
 
 /* FOOTER --------------------------------------------------------------------------*/
@@ -254,7 +304,7 @@ body {
 
 .containerActiv {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     row-gap: 3vh;
     column-gap: 1.2vw;
     justify-items: center;
@@ -263,7 +313,7 @@ body {
     position: relative;
     width: 100%;
     aspect-ratio: 16/9;
-    color: rgb(47, 60, 64);
+    color: #f3f3f3; 
     perspective: 600px;
     /* animación de rotación */
 }
@@ -314,7 +364,6 @@ body {
     flex-direction: column;
     justify-content: center;
     background: rgba(65, 84, 90, .5);
-    color: rgb(29, 170, 204);
     text-align: center;
     font-size: 1.2rem;
     transform: rotateY(180deg);
@@ -324,6 +373,7 @@ body {
 .cardActiv .back h3 {
     margin: 0 auto 5%;
     width: 80%;
+    color: rgb(29, 170, 204);
     text-transform: uppercase;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
 }
@@ -351,9 +401,19 @@ body {
 /* MEDIA QUERYS PAG INICIO --------------------------------------------------- */
 
 @media (max-width: 890px) {
+
+    body {
+        padding-bottom: 25em;
+    }
+
+    main {
+        margin: 0;
+    }
+
     .caja-header {
         background-image: url(../img/gym1.png);
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -423,7 +483,7 @@ body {
     }
 
     .caja-mensaje {
-        font-size: 10px;
+        font-size: 0.7rem;
         
     }
 
@@ -475,5 +535,50 @@ body {
         height: 3px;
         background-color: white;
         margin: 5px;
+    }
+
+    /* QUERYS FOOTER --------------------------------------------------- */
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+
+    .caja-redes {
+        gap: 50px;
+    }
+
+    .caja-mensaje {
+        font-size: 0.7rem;
+        
+    }
+
+     /* QUERYS SOBRE NOSOTROS --------------------------------------------------- */
+
+    .textoArt1,
+    .imgArt1 {
+        max-width: 90%;
+    }
+
+    .containerCoaches {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .sectionNum {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .numBox {
+        border:none;
+        background-color: #075661;
     }
 }
