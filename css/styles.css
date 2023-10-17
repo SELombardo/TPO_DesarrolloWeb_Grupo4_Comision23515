@@ -583,3 +583,71 @@ body {
         background-color: #075661;
     }
 }
+
+
+ /* CONTACTO --------------------------------------------------- */
+
+
+ #contact-form{
+    text-align: center;
+    border: 1px solid #ccc;
+    background: white;
+    
+}
+
+
+
+ #contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    
+}
+
+
+
+
+
+#contact-form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+#contact-form button:hover {
+    background-color: #555;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+        width: 300px;
+}
+
+.form-contacto2
+{
+
+max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);}
+ /* MAPA --------------------------------------------------- */
+
+.maps {
+    text-align: center;
+    color: white;
+
+}
+#contact-form {
+border: 2px solid #000;
+      padding: 10px; 
+       }
+
