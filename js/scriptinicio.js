@@ -20,7 +20,7 @@ function mostrarMensaje() {
     mensajeActual = 0;
   }
 
-  setTimeout(mostrarMensaje, 5000); 
+  setTimeout(mostrarMensaje, 4000);
 }
 
 mostrarMensaje();
